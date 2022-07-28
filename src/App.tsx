@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import { ReactComponent as Logo } from './assets/logo.svg'
 
 function App() {

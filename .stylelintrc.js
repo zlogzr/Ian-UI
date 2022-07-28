@@ -22,7 +22,6 @@ module.exports = {
     'no-descending-specificity': true, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器。
     'selector-max-id': 0, // 限制一个选择器中 ID 选择器的数量
     'max-nesting-depth': 6,
-    'no-empty-source': false,
     indentation: [
       2,
       {
