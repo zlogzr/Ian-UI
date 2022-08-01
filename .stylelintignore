@@ -6,7 +6,6 @@
 *.eot
 *.ttf
 *.woff
-*.css
 /build
 /public
 /node_modules

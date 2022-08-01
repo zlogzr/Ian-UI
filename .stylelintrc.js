@@ -1,6 +1,7 @@
 module.exports = {
   plugins: ['stylelint-order'],
-  extends: ['stylelint-config-standard', 'stylelint-config-idiomatic-order'],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-idiomatic-order'],
+  customSyntax: require('postcss-scss'),
   rules: {
     'string-quotes': 'double', // 双引号
     'no-empty-source': null,
