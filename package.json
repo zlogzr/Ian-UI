@@ -22,8 +22,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject",
-    "prepare": "husky install"
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
