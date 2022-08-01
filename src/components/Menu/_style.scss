@@ -1,0 +1,50 @@
+.viking-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  border-bottom: $menu-border-width solid $menu-border-color;
+  margin-bottom: 30px;
+  box-shadow: $menu-box-shadow;
+  list-style: none;
+
+  .menu-item {
+    padding: $menu-item-padding-y $menu-item-padding-x;
+    cursor: pointer;
+    transition: $menu-transition;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &.is-disabled {
+      color: $menu-item-disabled-color;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &.is-active,
+    &:hover {
+      border-bottom: $menu-item-active-border-width solid $menu-item-active-color;
+      color: $menu-item-active-color;
+    }
+  }
+}
+
+.menu-vertical {
+  flex-direction: column;
+  border-right: $menu-border-width solid $menu-border-color;
+  border-bottom: 0;
+  margin: 10px 20px;
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .menu-item {
+    border-left: $menu-item-active-border-width solid transparent;
+
+    &.is-active,
+    &:hover {
+      border-bottom: 0;
+      border-left: $menu-item-active-border-width solid $menu-item-active-color;
+    }
+  }
+}
