@@ -4,6 +4,19 @@ import Menu, { MenuProps } from './menu'
 import MenuItem from './menuItem'
 import SubMenu from './subMenu'
 
+jest.mock('../Icon/icon', () => {
+  // eslint-disable-next-line react/display-name
+  return () => {
+    return <i className="fa" />
+  }
+})
+jest.mock('react-transition-group', () => {
+  return {
+    CSSTransition: (props: any) => {
+      return props.children
+    }
+  }
+})
 const testProps: MenuProps = {
   defaultIndex: '0',
   onSelect: jest.fn(),
@@ -39,6 +52,7 @@ const createStyleFile = () => {
     }
   `
   const style = document.createElement('style')
+  style.type = 'text/css'
   style.innerHTML = cssFile
   return style
 }

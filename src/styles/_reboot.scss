@@ -138,7 +138,7 @@ p {
 abbr[title],
 abbr[data-original-title] { // 1
   text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
+  // text-decoration: underline dotted; // 2
   cursor: help; // 3
   text-decoration-skip-ink: none; // 4
 }
@@ -355,6 +355,7 @@ button {
 button:focus {
   outline: 1px dotted;
   // outline: 5px auto -webkit-focus-ring-color;
+  outline: 5px auto $primary;
 }
 
 // 1. Remove the margin in Firefox and Safari
