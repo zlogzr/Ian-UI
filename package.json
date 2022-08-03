@@ -1,10 +1,26 @@
 {
-  "name": "ianD",
-  "version": "1.0.0",
+  "name": "ian-ui",
+  "version": "1.0.1",
+  "description": "React components library",
+  "author": "Nolan Zhang",
   "private": false,
-  "main": "build/index.js",
-  "module": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "React"
+  ],
+  "homepage": "https://github.com/zlogzr/Ian-UI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zlogzr/Ian-UI"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
@@ -24,19 +40,19 @@
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.3.0",
     "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4",
-    "ianD": "1.0.0"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "craco start",
-    "clean": "rimraf ./build",
+    "clean": "rimraf ./dist",
     "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "craco test",
     "eject": "craco eject",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./build/index.css",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": [
