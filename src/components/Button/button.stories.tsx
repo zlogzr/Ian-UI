@@ -1,12 +1,19 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import React from 'react'
 
 import Button from './button'
+
+// import mdx from './button.mdx'
 
 const buttonMeta = {
   title: 'Button',
   component: Button
+  // parameters: {
+  //   docs: {
+  //     page: mdx
+  //   }
+  // }
 } as ComponentMeta<typeof Button>
+
 export default buttonMeta
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />
@@ -16,6 +23,13 @@ Default.args = {
   children: 'Default Button'
 }
 Default.storyName = '默认按钮样式'
+Default.decorators = [
+  Story => (
+    <div style={{ margin: '50px' }}>
+      <Story />
+    </div>
+  )
+]
 
 export const Large = Template.bind({})
 Large.args = {
