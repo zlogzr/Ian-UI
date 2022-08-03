@@ -13,7 +13,7 @@ export interface SubMenuProps {
   children?: ReactNode
 }
 
-const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className }) => {
+export const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className }) => {
   const context = useContext(MenuContext)
   console.log('context.index', context.index)
   console.log('index', index)

@@ -51,17 +51,23 @@
   box-shadow: none;
   color: $btn-link-color;
   font-weight: $font-weight-normal;
-  text-decoration: $link-decoration;
+
+  // text-decoration: $link-decoration;
+  text-decoration: none;
 
   &:hover {
     color: $btn-link-hover-color;
-    text-decoration: $link-hover-decoration;
+
+    // text-decoration: $link-hover-decoration;
+    text-decoration: none;
   }
 
   &:focus,
   &.focus {
     box-shadow: none;
-    text-decoration: $link-hover-decoration;
+
+    // text-decoration: $link-hover-decoration;
+    text-decoration: none;
   }
 
   &:disabled,
