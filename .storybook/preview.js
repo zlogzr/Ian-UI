@@ -12,5 +12,11 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/
     }
+  },
+  viewMode: 'docs',
+  options: {
+    storySort: {
+      order: ['Welcome', 'Button', 'Menu']
+    }
   }
 }
