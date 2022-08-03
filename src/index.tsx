@@ -1,15 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-import './styles/index.scss'
+library.add(fas)
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
-
-reportWebVitals()
+export { default as Button } from './components/Button'
+export { default as Menu } from './components/Menu'

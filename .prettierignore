@@ -3,4 +3,5 @@
 package-lock.json
 *.scss
 /src/stories
+/dist
 
